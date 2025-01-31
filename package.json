@@ -1,11 +1,12 @@
 {
+
   "name": "smartpicks",
   "version": "1.0.0",
-  "description": "\"Best ecommerce for sstartups\"",
+  "description": "Best ecommerce for startups",
   "main": "index.js",
-  "scripts": {
+  "scripts": {  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "\"vansh thapar\"",
+  "author": "Vansh Thapar",
   "license": "ISC"
 }
