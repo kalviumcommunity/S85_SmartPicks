@@ -80,3 +80,13 @@ For any questions or suggestions, reach out at **vanshthapar.professional@gmail.
 
 ### 🌟 If you like this project, don’t forget to star ⭐ the repository!
 
+---
+
+# ASAP Project - Task
+
+This project is an implementation of the ASAP app deployed on Render.
+
+## Deployed App
+
+You can access the deployed app here: [https://s85-smartpicks-1.onrender.com/ping](https://s85-smartpicks-1.onrender.com/ping)
+
