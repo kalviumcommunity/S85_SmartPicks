@@ -1,0 +1,36 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    margin-bottom: 20px;
+    color: #4caf50;
+  }
+  
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th, .product-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .product-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .product-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

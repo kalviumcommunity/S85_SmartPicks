@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Entity from '../components/entity'
+import DisplayData from '../components/DisplayData'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <li>Address : White House U.S.A</li>
     </ul>
     <Entity/>
+    <DisplayData/>
     </>
   )
 }
