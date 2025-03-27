@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
     unique: true,
     trim: true,
   },
+  url:{
+    type:String,
+    required:[true,'⚠️ Image url is required']
+  },
   productCategory: {
     type: String,
     required: [true, '⚠️ Product category is required'],
@@ -46,7 +50,6 @@ const productSchema = new mongoose.Schema({
   },
 });
 
-// ✅ Create Product Model
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;
