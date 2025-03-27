@@ -1,24 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Entity from '../components/entity'
-import DisplayData from '../components/DisplayData'
+import About from './Pages/About'
+import Category from './Pages/Category'
+import Home from './Pages/Home'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const route = createBrowserRouter([
+    {
+      path: '/',
+      element:(
+        <>
+          <Home/>
+        </>
+      )
+    },{
+      path:'/category',
+      element:(
+        <>
+          <Category/>
+        </>
+      )
+    },
+    {
+      path:'/about',
+      element:(
+        <>
+          <About/>
+        </>
+      )
+    }
+  ])
 
   return (
-    <>
-    <h1>Name : Vansh Thapar </h1>
-    <ul>
-      <li>E-Mail : vanshthapar@gmail.com</li>
-      <li>Phone Number : 9876543210</li>
-      <li>Address : White House U.S.A</li>
-    </ul>
-    <Entity/>
-    <DisplayData/>
-    </>
+    <div>
+       <RouterProvider router={route}/>
+    </div>
   )
 }
 
