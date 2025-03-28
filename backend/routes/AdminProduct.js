@@ -42,6 +42,45 @@ route.get("/handlefindproduct", async (req, res) => {
       res.status(500).json({ error: "❌ Error finding the product." });
     }
   });
+
+  
+// ✅ Delete a product
+route.delete("/handledeleteproduct/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedProduct = await Product.findByIdAndDelete(id);
+
+    if (!deletedProduct) {
+      return res.status(404).json({ message: "Product not found." });
+    }
+
+    res.status(200).json({ message: "Product deleted successfully." });
+  } catch (err) {
+    res.status(500).json({ error: "Error deleting the product." });
+  }
+});
+
+route.put("/handleupdateproduct/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedData = req.body;
+
+  try {
+    const updatedProduct = await Product.findByIdAndUpdate(id, updatedData, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedProduct) {
+      return res.status(404).json({ message: "Product not found." });
+    }
+
+    res.status(200).json({ message: "Product updated successfully.", updatedProduct });
+  } catch (err) {
+    res.status(500).json({ error: "Error updating the product." });
+  }
+});
+
   
 
 

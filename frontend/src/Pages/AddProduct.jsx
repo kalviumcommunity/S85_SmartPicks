@@ -24,8 +24,6 @@ const AddProduct = () => {
     }catch{
       console.log('unable to add the product')
     }
-
-
     console.log(data)
   }
 
