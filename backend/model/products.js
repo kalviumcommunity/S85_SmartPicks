@@ -18,7 +18,6 @@ const productSchema = new mongoose.Schema({
   productName: {
     type: String,
     required: [true, '⚠️ Product name is required'],
-    unique: true,
     trim: true,
   },
   url:{
@@ -30,7 +29,7 @@ const productSchema = new mongoose.Schema({
     required: [true, '⚠️ Product category is required'],
   },
   Price: {
-    type: Number,
+    type: String,
     required: [true, '⚠️ Price is required'],
     min: [1, '⚠️ Price must be at least 1'],
   },
@@ -39,7 +38,7 @@ const productSchema = new mongoose.Schema({
     required: [true, '⚠️ Startup name is required'],
   },
   Ratings: {
-    type: Number,
+    type: String,
     required: [true, '⚠️ Ratings are required'],
     min: [0, '⚠️ Ratings cannot be less than 0'],
     max: [5, '⚠️ Ratings cannot be more than 5'],

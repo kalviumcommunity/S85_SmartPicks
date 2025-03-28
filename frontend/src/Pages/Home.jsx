@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
+import Navbar from '../components/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
-import Footer from '../../components/Footer'
+import Footer from '../components/Footer'
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className='h-300' style={{backgroundImage: "URL('/IMG.jpg')" , backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
+      <div className='h-500 '  style={{backgroundImage: "URL('/IMG.jpg')" , backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
         {/* navbar */}
         <Navbar className='w-fit' />
         {/* welcome message */}
