@@ -6,6 +6,7 @@ const port = 3000;
 // Importing Routes and Models
 const productRoute = require('./routes/product');
 require('./model/db'); // MongoDB connection
+const AddProduct = require('./routes/AdminProduct')
 
 // Middleware for parsing JSON and URL-encoded data
 app.use(express.json());
@@ -17,7 +18,7 @@ app.use(cors());
 
 // ✅ Use product routes
 app.use('/api', productRoute);
-
+app.use('/',AddProduct)
 
 // ✅ Start server on specified port
 app.listen(port, () => {
