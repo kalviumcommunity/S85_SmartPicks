@@ -1,26 +1,25 @@
 const express = require('express');
-const cors = require('cors'); // ✅ CORS middleware added
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
-// Importing Routes and Models
-const productRoute = require('./routes/product');
-require('./model/db'); // MongoDB connection
-const AddProduct = require('./routes/AdminProduct')
+// DB connection
+require('./model/db');
 
-// Middleware for parsing JSON and URL-encoded data
+// Import routes
+const productRoute = require('./routes/product');
+const userRoute = require('./routes/users'); // ✅ new
+
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
-// ✅ Enable CORS for frontend requests
 app.use(cors());
 
-
-// ✅ Use product routes
+// Route usage
 app.use('/api', productRoute);
-app.use('/',AddProduct)
+app.use('/', userRoute); // ✅ enables /findbrand
 
-// ✅ Start server on specified port
+// Start server
 app.listen(port, () => {
   console.log(`🚀 The server is running on http://localhost:${port}`);
 });
