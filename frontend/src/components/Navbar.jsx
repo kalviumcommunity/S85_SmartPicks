@@ -8,10 +8,10 @@ const Navbar = () => {
       </div>
         <div className=' flex w-[40%] backdrop-blur-lg bg-white/30 shadow-lg h-15 justify-center rounded-3xl border-3 border-black/20 text-xl font-bold text-white/80'>
             <ul className='flex flex-row justify-evenly items-center w-full'>
-                <li>Home</li>
-                <li>About</li>
-                <li>Categories</li>
-                <li>Contact</li>
+                <li> <a href="/home">Home</a></li>
+                <li><a href="/brands">Brands</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
       <div className='w-[30%]'>
@@ -21,6 +21,9 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
+
+
+
   )
 }
 

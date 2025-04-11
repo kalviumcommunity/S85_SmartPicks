@@ -1,5 +1,6 @@
 import About from './Pages/About'
 import AddProduct from './Pages/AddProduct'
+import Brands from './Pages/Brands'
 import Category from './Pages/Category'
 import FindProduct from './Pages/FindProduct'
 import Home from './Pages/Home'
@@ -16,6 +17,27 @@ function App() {
         </>
       )
     },{
+      path:'/home',
+      element:(
+        <>
+          <Home/>
+        </>
+      )
+    },{
+      path:'/category',
+      element:(
+        <>
+          <Category/>
+        </>
+      )
+    },{
+      path:'/brands',
+      element:(
+        <>
+          <Brands/>
+        </>
+      )
+    },{
       path:'/category',
       element:(
         <>
@@ -24,13 +46,6 @@ function App() {
       )
     },
     {
-      path:'/about',
-      element:(
-        <>
-          <About/>
-        </>
-      )
-    },{
       path:'/addProduct',
       element:(
         <>
