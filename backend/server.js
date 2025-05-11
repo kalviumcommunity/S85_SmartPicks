@@ -27,6 +27,9 @@ app.use(cookieParser());
 app.use('/api', productRoute);
 app.use('/', authRoute); // ✅ handles /register and /login from user2.js
 
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
+
 // Start server
 app.listen(port, () => {
   console.log(`🚀 The server is running on http://localhost:${port}`);
