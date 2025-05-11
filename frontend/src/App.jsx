@@ -4,6 +4,8 @@ import Brands from './Pages/Brands'
 import Category from './Pages/Category'
 import FindProduct from './Pages/FindProduct'
 import Home from './Pages/Home'
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
@@ -59,7 +61,15 @@ function App() {
         <FindProduct/>
         </>
       )
-    }
+    },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/signup',
+    element: <Signup />
+  }
   ])
 
   return (
