@@ -16,8 +16,8 @@ const Navbar = () => {
         </div>
       <div className='w-[30%]'>
         <ul className=' flex justify-end text-2xl gap-5 mr-10 text-white items-center'>
-          <li className='bg-blue-600 rounded-lg w-30 text-center h-12 flex items-center justify-center'>Login</li>
-          <li className='bg-zinc-800 rounded-lg w-30 text-center h-12 flex items-center justify-center'>Sign Up</li>
+          <li className='bg-blue-600 rounded-lg w-30 text-center h-12 flex items-center justify-center'><a href="/login">Login</a></li>
+          <li className='bg-zinc-800 rounded-lg w-30 text-center h-12 flex items-center justify-center'><a href="/signup">Sign Up</a></li>
         </ul>
       </div>
     </div>
